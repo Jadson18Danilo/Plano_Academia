@@ -1,0 +1,32 @@
+{ 
+"git.autofetch": true, /*faz o fetch automaticamente*/ 
+"workbench.iconTheme": "symbols", /*muda os icones*/ 
+"files.autoSave": "afterDelay", /*salva automaticamente*/ 
+"liveServer.settings.donotShowInfoMsg": true, /*não mostra a mensagem de info do live server*/ 
+"workbench.colorTheme": "Min Dark", /*muda o tema do vscode*/ 
+"editor.fontFamily": "jetBrains Mono", /*muda a fonte do vscode*/ 
+"editor.fontSize": 14, /*muda o tamanho da fonte*/ 
+"editor.lineHeight": 1.8, /*muda a altura da linha*/ 
+"editor.rulers": [80, 120], /*adiciona linhas verticais*/ 
+"workbench.startupEditor": "newUntitledFile", /*abre um novo arquivo ao iniciar o vscode*/ 
+"editor.renderLineHighlight": "gutter", /*destaca a linha no gutter*/ 
+"editor.fontLigatures": true, /*liga as fontes*/ 
+"workbench.editor.labelFormat": "short", /*muda o formato do nome do arquivo*/ 
+"explorer.compactFolders": false, /*Ctrl+Q = revelar o menu*/ 
+"editor.minimap.enabled": false, /*esconde o minimapa */ 
+"editor.scrollbar.vertical": "hidden", /*esconde a barra de rolagem vertical*/ 
+"editor.scrollbar.horizontal": "hidden", /*esconde a barra de rolagem horizontal*/ 
+"window.commandCenter": false, /*esconde o command center*/ 
+"workbench.editor.showTabs": "none", /*esconde a barra de status*/ 
+"editor.wordWrap": "on", /*quebra de linha*/ 
+"window.titleBarStyle": "native", /*muda o estilo da barra de titulo*/ 
+"workbench.statusBar.visible": false, /*esconde a barra de status*/ 
+"window.menuBarVisibility": "toggle", /*esconde a barra de menu*/ 
+"workbench.activityBar.location": "hidden", /*esconde a barra de atividades*/ 
+"window.customTitleBarVisibility": "never", /*esconde a barra de titulo*/ 
+"liveServer.settings.donotVerifyTags": true, /*não verifica as tags*/ 
+ "workbench.colorCustomizations": {
+"editor.lineHighlightBorder": "#ff990027", /* Laranja */
+"editor.lineHighlightBackground": "#ff990007" /* Fundo sutil */
+}
+}
