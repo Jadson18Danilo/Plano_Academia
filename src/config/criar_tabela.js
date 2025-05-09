@@ -36,3 +36,5 @@ class CriarTabela{
         console.log('Tabela matricula criada com sucesso!')
     }
 }
+
+export default CriarTabela
