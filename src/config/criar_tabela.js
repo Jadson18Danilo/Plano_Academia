@@ -3,7 +3,7 @@ dotenv.config()
 import client from './database.js'
 
 class CriarTabela{
-    static async aluno(){
+    static async cadastrar(){
         const consulta = `create tabe if not exists aluno(
             id_aluno serial integer,
             nome text not null,

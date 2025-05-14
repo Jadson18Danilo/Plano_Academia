@@ -26,3 +26,5 @@ class PlanoView {
         await PlanoController.excluirPlano(id_plano);
     }
 }
+
+export default PlanoView
