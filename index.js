@@ -19,9 +19,9 @@
 // criarTabelas()
 
 import PromptSync from "prompt-sync";
-import UsuarioView from "./src/modules/aluno/views/"
-import EstacaoView from "./src/modules/matricula/views/index";
-import ReservasView from "./src/modules/plano/views/index";
+import UsuarioView from "./src/modules/aluno/views/index.js"
+import EstacaoView from "./src/modules/matricula/views/index.js";
+import ReservasView from "./src/modules/plano/views/index.js";
 import CriarTabelas from "./src/config/criar_tabela";
 
 const input = PromptSync();
@@ -158,13 +158,13 @@ async function menuMatriculas() {
     await criarTabela();
 
     const opcoes = [
-        "1 - Adicionar Matrícula",
-        "2 - Verificar Matrícula",
-        "3 - Listar Matrícula",
-        "4 - Atualizar Matrícula",
-        "5 - Cancelar Matrícula",
-        "6 - Gerar Relatório por Usuário",
-        "7 - Gerar Relatório das Estações mais utilizadas",
+        "1 - Criar nova Matrícula",
+        "2 - Editar Matrícula",
+        "3 - Excluir Matrícula",
+        "4 - Listar Matrícula por Plano ou Aluno",
+        "5 - Filtrar Matrícula por Status",
+        "6 - Total de alunos por Plano",
+        "7 - Total da Receita do Plano",
         "0 - Sair"
     ];
 
@@ -178,25 +178,25 @@ do {
             console.log("Saindo...");
             break;
         case "1":
-            await ReservasView.cadastrar();
+            await MatriculaView.criarMatricula();
             break;
         case "2":
-            await ReservasView.verificarReserva();
+            await MatriculaView.editarMatricula();
             break;
         case "3":
-            await ReservasView.listarReserva();
+            await MatriculaView.excluirMatricula();
             break;
         case "4":
-            await ReservasView.atualizarStatus();
+            await MatriculaView.listarPorPlanoOuAluno();
             break;
         case "5":
-            await ReservasView.cancelarReserva();
+            await MatriculaView.filtrarMatriculaPorStatus();
             break;
         case "6":
-            await ReservasView.relatorioTotalHoras();
+            await MatriculaView.totalDeAlunoPorPlano();
             break;
         case "7":
-            await ReservasView.relatorioEstacoesMaisUtilizadas();
+            await MatriculaView.totalDePlano();
             break;
 
          default:

@@ -17,21 +17,37 @@ class CadastroView {
     );
     console.table(aluno);
   }
-  static async editarAluno(nome, cpf, telefone, id_aluno) {
+  static async editarAluno() {
+    const id_aluno = input("Digite o código do aluno: ");
+    const nome = input("Digite Seu nome: ");
+    const cpf = input("Digite seu CPF: ");
+    const telefone = input("Digite seu telefone: ");
     const aluno = await CadastroController.atualizarCadastro(
+      id_aluno,
       nome,
       cpf,
-      telefone,
-      id_aluno
-    ); 
+      telefone
+    );
     console.table(aluno);
   }
-  static async buscarCpfDoCadastro(cpf) {
+  
+  static async buscarCpfDoCadastro() {
+    const cpf = input("Digite o CPF do aluno: ");
     const aluno = await CadastroController.buscarCpfDoCadastro(cpf);
-    console.table(aluno);
+    if (aluno.length === 0) {
+      console.error("Nenhum aluno encontrado com esse CPF!");
+    } else {
+      console.table(aluno);
+    }
   }
-  static async excluirCadastro(cpf) {
-    await CadastroController.excluirCadastro(cpf);
+  static async excluirCadastro() {
+    const id_aluno = input("Digite o código do aluno: ");
+    const aluno = await CadastroController.excluirCadastro(id_aluno);
+    if (aluno.length === 0) {
+      console.error("Nenhum aluno encontrado com esse código!");
+    } else {
+      console.table(aluno);
+    }
   }
 }
 export default CadastroView;

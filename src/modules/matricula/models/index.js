@@ -1,7 +1,7 @@
 import client from "../../../config/database.js"
 
 class MatriculaModel {
-    static async novaMatricula(id_matricula,data_inicio, data_fim, status, id_aluno, id_plano) {
+    static async novaMatricula(id_matricula, data_inicio, data_fim, status, id_aluno, id_plano) {
         const dados = [id_matricula, data_inicio, data_fim, status, id_aluno, id_plano]
         const consulta = `insert into matricula(id_matricula, data_inicio, data_fim, status, id_aluno, id_plano)
             values ($1, $2, $3, $4, $5, $6) returning *;`
@@ -53,8 +53,6 @@ class MatriculaModel {
         return resultado.rows
     }
     
-
-
 }
 
 export default MatriculaModel
