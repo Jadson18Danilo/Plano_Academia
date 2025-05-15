@@ -43,7 +43,7 @@ class MatriculaController {
 
     static async listarPorPlanoOuAluno(id_plano, id_aluno){
         try {
-            const aluno = await MatriculaModel.listarPorPlanoOuAluno(id_plano, id_aluno)
+            const aluno = await MatriculaModel.listarPorPlanoOuAluno()
             if (aluno.length === 0) {
                 return console.error('Nenhuma matrícula encontrada!')
             }
